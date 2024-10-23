@@ -1,0 +1,155 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 90%;
+  max-width: 1032px; /* More width for larger screens */
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 70%;
+  backdrop-filter: blur(5px); /* Slight blur to match glass effect */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(255, 0, 0); /* Transparent button */
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(0, 255, 34);
+  color: #ffffff;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.main-weather-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.current-weather,
+.weather-day {
+  background: rgba(255, 255, 255, 0.2); /* Glass effect for the weather boxes */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  color: white; /* Text color for readability */
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.weather-day {
+  background: rgba(255, 255, 255, 0.2); /* Matches glass effect of the weather boxes */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+.weather-day img,
+.current-weather img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .main-weather-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .current-weather,
+  .weather-day {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .main-weather-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .current-weather,
+  .weather-day {
+    width: 100%;
+    max-width: 250px;
+  }
+}
